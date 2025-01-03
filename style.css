@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    min-height: 125vh;
+    color: aliceblue;
+    font-size: 15px;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 30px;
+}
+
+header > a > img{
+    width: 200px;
+    height: 100px;
+}
+
+a, li {
+    text-decoration: none;
+    list-style-type: none;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+/* MAIN */
+h1{
+    text-align: center;
+}
+
+.container{
+    /* margin auto para centrar el contenedor */
+    /* max-width para darle como maximo un ancho y que no ocupe siempre todo el ancho del main */
+    max-width: 2000px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.gallery{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-gap: 50px;
+}
+
+.gallery > a > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+}
+
+#hero{
+    min-height: 100vh;
+    background-image: url(https://cdn-p.smehost.net/sites/28d35d54a3c64e2b851790a18a1c4c18/wp-content/uploads/2015/12/one_0.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* FOOTER */
+footer{
+    position: sticky;
+    min-height: 10vh;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+}
+
+.links > a > img {
+    width: 20px;
+}
+
+@media (max-width: 500px) {
+    /* header */
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    header > a > img{
+        width: 120px;
+        height: 80px;
+    }
+
+    header>nav>ul{
+        padding: 0;
+    }
+    h1{
+        font-size: 12px;
+    }
+
+}
